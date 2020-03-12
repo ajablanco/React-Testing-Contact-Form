@@ -38,10 +38,13 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label htmlFor="email" placeholder="bluebill1049@hotmail.com">
+          <label htmlFor="email"  >
             Email*
           </label>
-          <input name="email" ref={register({ required: true })} />
+          <input 
+          name="email" 
+          placeholder="bluebill1049@hotmail.com"
+          ref={register({ required: true })} />
           {errors.email && (
             <p>Looks like there was an error: {errors.email.type}</p>
           )}
@@ -55,7 +58,18 @@ const ContactForm = () => {
             {JSON.stringify(data, null, 2)}
           </pre>
         )}
+        <div className="termsBox">
+      
+        <label htmlFor="checkbox">By checking the box below, you agree to the terms and conditions</label>
+        <input type="checkbox" name="checkbox"/>
+
+         
+        </div>
+
+
         <input type="submit" />
+
+
       </form>
     </div>
   );
